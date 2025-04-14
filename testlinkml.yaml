@@ -1,0 +1,186 @@
+id: http://example.com/P04637_Schema
+name: P04637_Schema
+classes:
+  MainClass:
+    attributes:
+      entryType:
+        range: string
+      primaryAccession:
+        range: string
+      secondaryAccessions:
+        range: string
+        multivalued: true
+        description: 'Mixed Type Arrays: secondaryAccessions'
+      uniProtkbId:
+        range: string
+      entryAudit:
+        range: entryAudit
+        description: 'computing nested object: entryAudit'
+      annotationScore:
+        range: float
+      organism:
+        range: organism
+        description: 'computing nested object: organism'
+      proteinExistence:
+        range: string
+      proteinDescription:
+        range: proteinDescription
+        description: 'computing nested object: proteinDescription'
+      genes:
+        range: genes_Item
+        multivalued: true
+        description: 'Mixed Type Arrays: genes'
+      comments:
+        range: comments_Item
+        multivalued: true
+        description: 'Mixed Type Arrays: comments'
+      features:
+        range: features_Item
+        multivalued: true
+        description: 'Mixed Type Arrays: features'
+      keywords:
+        range: keywords_Item
+        multivalued: true
+        description: 'Mixed Type Arrays: keywords'
+      references:
+        range: references_Item
+        multivalued: true
+        description: 'Mixed Type Arrays: references'
+      uniProtKBCrossReferences:
+        range: uniProtKBCrossReferences_Item
+        multivalued: true
+        description: 'Mixed Type Arrays: uniProtKBCrossReferences'
+      sequence:
+        range: sequence
+        description: 'computing nested object: sequence'
+      extraAttributes:
+        range: extraAttributes
+        description: 'computing nested object: extraAttributes'
+  entryAudit:
+    attributes:
+      firstPublicDate:
+        range: string
+      lastAnnotationUpdateDate:
+        range: string
+      lastSequenceUpdateDate:
+        range: string
+      entryVersion:
+        range: integer
+      sequenceVersion:
+        range: integer
+  organism:
+    attributes:
+      scientificName:
+        range: string
+      commonName:
+        range: string
+      taxonId:
+        range: integer
+      lineage:
+        range: string
+        multivalued: true
+        description: 'Mixed Type Arrays: organism_lineage'
+  proteinDescription:
+    attributes:
+      recommendedName:
+        range: proteinDescription_recommendedName
+        description: 'computing nested object: proteinDescription_recommendedName'
+      alternativeNames:
+        range: proteinDescription_alternativeNames_Item
+        multivalued: true
+        description: 'Mixed Type Arrays: proteinDescription_alternativeNames'
+  proteinDescription_recommendedName:
+    attributes:
+      fullName:
+        range: proteinDescription_recommendedName_fullName
+        description: 'computing nested object: proteinDescription_recommendedName_fullName'
+  proteinDescription_recommendedName_fullName:
+    attributes:
+      value:
+        range: string
+  sequence:
+    attributes:
+      value:
+        range: string
+      length:
+        range: integer
+      molWeight:
+        range: integer
+      crc64:
+        range: string
+      md5:
+        range: string
+  extraAttributes:
+    attributes:
+      countByCommentType:
+        range: extraAttributes_countByCommentType
+        description: 'computing nested object: extraAttributes_countByCommentType'
+      countByFeatureType:
+        range: extraAttributes_countByFeatureType
+        description: 'computing nested object: extraAttributes_countByFeatureType'
+      uniParcId:
+        range: string
+  extraAttributes_countByCommentType:
+    attributes:
+      FUNCTION:
+        range: integer
+      COFACTOR:
+        range: integer
+      SUBUNIT:
+        range: integer
+      INTERACTION:
+        range: integer
+      SUBCELLULAR_LOCATION:
+        range: integer
+      ALTERNATIVE_PRODUCTS:
+        range: integer
+      TISSUE_SPECIFICITY:
+        range: integer
+      INDUCTION:
+        range: integer
+      DOMAIN:
+        range: integer
+      PTM:
+        range: integer
+      DISEASE:
+        range: integer
+      MISCELLANEOUS:
+        range: integer
+      SIMILARITY:
+        range: integer
+      CAUTION:
+        range: integer
+      WEB_RESOURCE:
+        range: integer
+  extraAttributes_countByFeatureType:
+    attributes:
+      Chain:
+        range: integer
+      DNA_binding:
+        range: integer
+      Region:
+        range: integer
+      Motif:
+        range: integer
+      Compositional_bias:
+        range: integer
+      Binding_site:
+        range: integer
+      Site:
+        range: integer
+      Modified_residue:
+        range: integer
+      Cross_link:
+        range: integer
+      Alternative_sequence:
+        range: integer
+      Natural_variant:
+        range: integer
+      Mutagenesis:
+        range: integer
+      Helix:
+        range: integer
+      Turn:
+        range: integer
+      Beta_strand:
+        range: integer
