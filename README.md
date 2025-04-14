@@ -18,4 +18,5 @@ This process typically involves the following steps:
 ```bash
 linkml-validate input.json output.yaml
 
-## Challeges
+## Challeges ##
+linkml-convert input.json output.yaml
