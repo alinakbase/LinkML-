@@ -1,4 +1,4 @@
-# LinkML-
+
 # UniProt JSON to YAML Conversion with LinkML
 
 In bioinformatics and data modeling, **LinkML (Linked Data Modeling Language)** is a powerful language used to define, validate, and transform structured data.
